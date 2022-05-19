@@ -1,0 +1,115 @@
+
+$clr-txt-reg: #7A081A;
+$clr-dark: rgb(19, 52, 61);
+
+.blur{
+    filter: blur(8px);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.main{
+    //background: url(../../../assets/imagenes/back__sala.gif) center;
+    //background-size: cover;
+    //height: 100vh;
+    //width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 50%;
+    height: 50%;
+    .container__login {
+        width: 100%;
+        height: 100%;
+       //border: 5px solid $clr-dark;
+       box-shadow: 0px 0px 43px 25px rgba(0,0,0,0.75);
+        display: flex;
+        img{
+            width: 50%;
+            height: 100%;
+        }
+        .container__form-login{
+            width: 100%;
+            height: 100%;
+            background-color: $clr-dark;
+            label {
+                color: whitesmoke;
+            }
+            .close-button{
+                height: 50px;
+                width: 50px;
+                position: fixed;
+                left: 43%;
+                top: 1%;
+                box-sizing: border-box;
+                line-height: 50px;
+                display: inline-block;
+
+                &:before, &:after {
+                    $width: 50px;
+                    $height: 10px;
+                    transform: rotate(-45deg);
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-top: -$height/2;
+                    margin-left: -$width/2;
+                    display: block;
+                    height: $height;
+                    width: $width;
+                    background-color:$clr-dark;
+                    transition: all 0.25s ease-out;
+                }
+            
+                &:after {
+                    transform: rotate(-135deg);
+                }
+            
+                &:hover {
+                    &:before, &:after {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+            
+        }
+
+    }
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    h2 {
+        color: $clr-txt-reg;
+        font-weight: 300;
+        font-size: 2.6em;
+        margin: 0.2em 0 0.1em;
+    }
+}
+  .form-element {
+    margin: 1.6em 0;
+    input {
+        border: none;
+        border-bottom: 1px solid $clr-dark;
+    }
+  }
+
+  .form-stack {
+    display: flex;
+    flex-direction: column;
+  }

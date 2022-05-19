@@ -1,9 +1,12 @@
 <div class="login">
       <h1>Login</h1>
-        <form method="post">
-          <input type="text" name="u" placeholder="Username" required="required" /><br>
-          <input type="password" name="p" placeholder="Password" required="required" />
-          <button type="submit" class="btn btn-primary btn-block btn-large" (click)="redirect()">Let me in.</button>
-        </form>
+      <div>
+          <input type="text" name="u" placeholder="Username" required="required" #email /><br>
+          <input type="password" name="p" placeholder="Password" required="required" #password />
+          <p>{{mensaje}}</p>
+          <button class="btn btn-primary btn-block btn-large" (click)="login(email.value, password.value)">Let me in.</button>
+          <button class="btn btn-primary btn-block btn-large" (click)="email.value = 'prueba@asd.com'; password.value = '123456' ">Inicio Rapido</button>
+          <button class="btn btn-primary btn-block btn-large" [routerLink]="['/register']">Register</button>
+      </div>
 </div>
   

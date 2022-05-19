@@ -1,9 +1,11 @@
 <div style="width: 100%; flex-direction: row; display: flex; justify-content: center; margin-top: 10px;" >
 <nav>
-    <a href="#" [routerLink]="['/home']">HOME</a>
-    <a href="#" [routerLink]="['/juegos']">GAMES</a>
-    <a href="#" [routerLink]="['/profile']">PROFILE</a>
-    <a href="#" [routerLink]="['/login']">LOG OUT</a>
+    <a href="#" (click)="refreshLogin()" [routerLink]="['/home']">HOME</a>
+    <a href="#" (click)="refreshLogin()" [hidden]="!loggedin" [routerLink]="['/juegos']">GAMES</a>
+    <a href="#" (click)="refreshLogin()" [hidden]="!loggedin" [routerLink]="['/profile']">PROFILE</a>
+    <a href="#" (click)="refreshLogin()" [hidden]="!loggedin" [routerLink]="['/chatroom']">CHATROOM</a>
+    <a id="login" [hidden]="loggedin" (click)="refreshLogin()" [routerLink]="['/login']">LOG IN</a>
+    <a id="logout" [hidden]="!loggedin" (click)="salir()" [routerLink]="['/login']">LOG OUT</a>
     <div id="indicator"></div>
 </nav>
 </div>

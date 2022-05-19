@@ -1,0 +1,35 @@
+<div class="blur"></div>
+<div class="main">
+  <div class="container__login">
+     
+     <div class="container__form-login">
+       <a routerLink="/Principal" class="close-button"></a>
+
+       <div class="content">
+         <h2>Register</h2>
+         <form action="" id="form-login">
+
+           <div class="form-element form-stack">
+             <label for="username-login" class="form-label">E-mail</label>
+             <input type="mail" id="username-login" name="username" [(ngModel)]="correo">
+           </div>
+           
+           <div class="form-element form-stack">
+             <label for="password" class="form-label">Password</label>
+             <input type="password" id="password" name="password" [(ngModel)]="password">
+           </div>
+
+           <div class="form-element form-stack">
+             <label for="password-repeat" class="form-label">Repeat Password</label>
+             <input type="password" id="password-repeat" name="password-repeat" [(ngModel)]="repetirPassword">
+           </div>
+
+           <div class="form-element">
+             <button id="logIn" class="login" type="submit" name="login" (click)="Register()">Register</button>
+             <p>{{mensaje}}</p>
+           </div>
+         </form>
+       </div>
+     </div>
+  </div>
+</div>

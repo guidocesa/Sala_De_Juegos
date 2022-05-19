@@ -1,0 +1,15 @@
+<div class="juego">
+    <div style="text-align:center">
+      <h1>
+        Clicker
+      </h1>
+      
+    </div>
+    <div class="tablero" (click)="comenzar()">
+        <h3 [hidden]="comienzo">Comenzar</h3>
+    </div>
+  
+    <h1 style="text-align:center">Tiempo restante: {{tiempo}}</h1>
+    <h1 style="text-align:center">Clicks: {{clicks}}</h1>
+    <button  [hidden]="reiniciar == false" (click)="reset()">Jugar otra vez</button>
+  </div>

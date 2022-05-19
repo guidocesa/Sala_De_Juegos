@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="title">
+    <h2>Chatroom</h2>
+  </div>
+  <div class="chatbox">
+    <div class="chat-box-msgs">
+        <div *ngFor="let itema of allUsers" class="divBlob">
+            <span class="message-blob">  "{{itema['user']}}" dice: {{itema['message']}}</span>
+        </div>     
+    </div>
+    <div class="input">
+      <input type="text" id="chatInput" name="chatInput" class="bottomInput" [(ngModel)]="this.mensaje"/>
+      <input
+        type="button"
+        value="Enviar"
+        id="chatInputBtn"
+        name="chatInput"
+        class="btnChat"
+        (click)="sendMessage()"
+      />
+    </div>
+  </div>
+</div>
